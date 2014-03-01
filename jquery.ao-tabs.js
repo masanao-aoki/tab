@@ -19,6 +19,13 @@
 		$tabMain.find('> *').hide();
 	}
 
+	//#の変更を監視
+	$(window).hashchange(function(){
+        var hash = location.hash;
+		setHash = window.location.hash.split("#")[1];
+        showCheck();
+    })
+
 	//有効なタブボタンにActiveをつける
 	function addActive(hashs) {
 		$tabSelect.find("a").removeClass("active");
@@ -27,6 +34,7 @@
 
 	//1番目を表示
 	function showFirst(ids) {
+		allHide();
 		$tabMain.find("[data-tabsId*="+ids+"]").show();
 		addActive(ids);
 	}
@@ -38,7 +46,7 @@
 			if(ns == $(this).attr("data-tabsId")) {
 				allHide();
 				addActive($(this).attr("data-tabsId"));
-				$("[data-tabsId*="+ns+"]").fadeIn();
+				$("[data-tabsId*="+ns+"]").show();
 			}
 		})
 	}
@@ -55,7 +63,7 @@
 
 	//初期表示の処理
 	function showCheck() {
-
+		console.log(setHash);
 		flagCheck(setHash);
 		if(!ActionFlag) {
 			showFirst($tabMain.find('> *').eq(0).attr("data-tabsId"));
@@ -69,6 +77,7 @@
 				
 			});
 		}
+		ActionFlag = false;
 	}
 
 	function addId() {
@@ -86,6 +95,7 @@
 	$tabSelect.find("a").click(function() {
 		tabSwitching($(this).attr("href").split("#")[1]);
 	});
+    $(window).hashchange();
 
 }
 })(jQuery);

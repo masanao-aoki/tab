@@ -63,7 +63,6 @@
 
 	//初期表示の処理
 	function showCheck() {
-		console.log(setHash);
 		flagCheck(setHash);
 		if(!ActionFlag) {
 			showFirst($tabMain.find('> *').eq(0).attr("data-tabsId"));

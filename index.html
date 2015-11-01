@@ -2,153 +2,8 @@
 <!-- saved from url=(0046)http://digi-tamaring.org/box_anime/index3.html -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<script src="jquery-2.1.0.min.js" type="text/javascript" ></script>
-<script src="jquery.ba-hashchange.js" ></script>
-<script src="jquery.ao-tabs.js" ></script>
+<link rel="stylesheet" href="./style.css">
 <title>タブ切り替え</title>
-
-<script type="text/javascript">
-jQuery(document).ready(function($){
-
-$("#aotab").aoTabs({
-	//タブ切り替えボタン
-	'tabSelects' : "#tab-select",
-	//タブグループ
-	'tabMain' : "#tabs"
-
-});
-
-});
-</script>
-
-<style>
-
-* {
-	margin: 0;
-	padding: 0; 
-}
-
-body　{
-	padding:  60px;
-}
-
-h1 {
-	margin: 40px 0;
-}
-
-#step {
-	width: 600px;
-	margin: 30px auto;
-}
-
-#step #tab-select {
-	overflow: hidden;
-	margin: 0;
-	list-style-type: none;
-}
-
-#step #tab-select li {
-float: left;
-}
-
-#step #tab-select li a {
-	display: block;
-	margin-right: 10px;
-	background-color: #ccc;
-	border: 1px solid #ccc;
-	border-bottom: 0px;
-	padding: 10px 24px;
-	font-size: 16px;
-	font-weight: bold;
-	color: #fff;
-	border-radius: 6px 6px 0 0; 
-	-webkit-border-radius: 6px 6px 0 0; 
-	-moz-border-radius: 6px 6px 0 0; 
-}
-
-#step #tab-select li a:hover {
-	background-color: #fff;
-	color: #666;
-}
-
-
-#step #tab-select li a.active {
-	background-color: #ff8400;
-	border: 1px solid #ff8400;
-	border-bottom: 0px;
-}
-
-#step #tab-select li a.active:hover {
-	background-color: #fff;
-	color: #ff8400;
-}
-
-
-
-#step #tabs {
-	padding: 0 20px 0;
-	border: 1px solid #ccc;
-	border-radius: 0 6px 6px 6px; 
-	-webkit-border-radius: 0 6px 6px 6px;
-	-moz-border-radius: 0 6px 6px 6px;
-}
-
-#step #tabs > div {
-	padding-top: 40px;
-}
-
-#step #tabs > div .section {
-	clear: both;
-	border-bottom:  1px dashed #ccc;
-	margin-bottom: 32px;
-	padding:0 10px 20px;
-}
-
-#step #tabs > div .section:last-child {
-	margin-bottom: 20px;
-}
-
-#step #tabs > div h2 ,
-#step #tabs > div .section h3 {
-	font-weight: bold;
-	margin-bottom: 12px;
-}
-
-#step #tabs > div h2 {
-	font-size: 22px;
-}
-
-#step #tabs > div .section h3 {
-	font-size: 16px;
-}
-
-#step #tabs > div .section p {
-	line-height: 180%;
-	font-size: 14px;
-	margin: 0 0 4px 0;
-}
-
-
-
-#step #tabs > div .section:last-child {
-	border: 0px;
-}
-
-#step #tabs > div .section .box {
-	overflow: hidden;
-}
-
-#step #tabs > div .section .box .inst-img {
-	float: left;
-	padding-right: 20px;
-}
-
-#step #tabs > div .section .step-img {
-	margin-bottom: 18px;
-}
-
-</style>
-
 </head>
 <body>
 <!-- contents Start -->
@@ -156,15 +11,14 @@ float: left;
 <div id="step">
 
 	<h1>タブ</h1>
-	<div id="aotab">
+	<div id="tab">
 		<ul id="tab-select">
 			<li><a href="#tabs-1">タブについて</a></li>
 			<li><a href="#tabs-2">利用方法</a></li>
-			<li><a href="#tabs-3">サンプル</a></li>
 		</ul>
 
 		<div id="tabs">
-			<div>
+			<div id="tabs-1">
 					<h2>タブについて</h2>
 				<div class="section">
 					<div class="textbox">
@@ -178,76 +32,54 @@ float: left;
 				</div>
 			</div>
 
-			<div>
+			<div id="tabs-2">
 				<h2>利用方法</h2>
 				<div class="section">
 						<h3>HTML部分</h3>
 					<div class="textbox">
-						<p>head内にて「jquery.ao-tabs.js」を読み込む</p>
-						<pre>
-&lt;div id="aotab"&gt;
-	&lt;ul id="tab-select"&gt;
-		&lt;li&gt;&lt;a href="#tabs-1"&gt;タブ1&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="#tabs-2"&gt;タブ2&lt;/a&gt;&lt;/li&gt;
-	&lt;/ul&gt;
-
-	&lt;div id="tabs"&gt;
-		&lt;div&gt;　タブ1内容　&lt;/div&gt;
-
-		&lt;div&gt;　タブ1内容　&lt;/div&gt;
-	&lt;/div&gt;
-
-&lt;/div&gt;
-						</pre>
-
-						
+						<p>head内にて「jquery.ao-tabs.js」を読み込む</p>						
 					</div>
 				</div>
-
-				<div class="section">
-					<h3>JS部分</h3>
-
-						<pre>
-$("#aotab").aoTabs();
-						</pre>
-						
-
-				</div>
-
-				<div class="section">
-					<h3>オプション</h3>
-						<p>各ボックスのID変更が可能</p>
-						<p>ID変更後はJS実行文にオプションを追記</p>
-						<pre>
-$("#aotab").aoTabs({
-
-	//タブ切り替えボタン
-	'tabSelects' : "タブ切り替えボタン　ボックスID",
-
-	//タブグループ
-	'tabMain' : "タブ切り替え部分　ボックスID"
-});
-						</pre>
-
-				</div>
-
-
-			</div>
-
-
-			<div>
-					<h2>サンプル</h2>
-				<div class="section">
-					<div class="textbox">
-						<p>サンプルダウンロード</p>
-						<p><a href="http://digitama-lab.net/tab/ao-tab.zip">http://digitama-lab.net/tab/ao-tab.zip</a></p>
-					</div>
-				</div>
-			</div>
-
-		</div>
 	</div>
 	
 </div>
+
+
+<script type="text/javascript">
+var tabBtn = document.querySelectorAll('#tab-select > *');
+var tabBody = document.querySelectorAll('#tabs > *');
+var hash = location.hash;
+console.log(hash);
+
+if(!hash) {
+	console.log();
+	open(tabBtn[0].childNodes[0].hash);
+}
+else {
+	open(hash);	
+}
+
+function close() {
+	for (var n = 0; tabBody.length > n; n++) {
+		tabBody[n].style.display = 'none';
+	}
+}
+
+function open(i) {
+	var targetTab = document.querySelectorAll(i);
+	console.log(targetTab);
+	close();
+	targetTab[0].style.display = 'block';
+//	document.getElementById(i).style.display = 'block';
+}
+
+for(var n=0; tabBtn.length > n; n++) {
+	tabBtn[n].onclick = function(e){
+		console.log(e);
+		open(e.target.getAttribute("href"));
+	}
+}
+
+</script>
 </body>
 </html>

@@ -1,0 +1,123 @@
+* {
+	margin: 0;
+	padding: 0; 
+}
+
+body　{
+	padding:  60px;
+}
+
+h1 {
+	margin: 40px 0;
+}
+
+#step {
+	width: 600px;
+	margin: 30px auto;
+}
+
+#step #tab-select {
+	overflow: hidden;
+	margin: 0;
+	list-style-type: none;
+}
+
+#step #tab-select li {
+float: left;
+}
+
+#step #tab-select li a {
+	display: block;
+	margin-right: 10px;
+	background-color: #ccc;
+	border: 1px solid #ccc;
+	border-bottom: 0px;
+	padding: 10px 24px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #fff;
+	border-radius: 6px 6px 0 0; 
+	-webkit-border-radius: 6px 6px 0 0; 
+	-moz-border-radius: 6px 6px 0 0; 
+}
+
+#step #tab-select li a:hover {
+	background-color: #fff;
+	color: #666;
+}
+
+
+#step #tab-select li a.active {
+	background-color: #ff8400;
+	border: 1px solid #ff8400;
+	border-bottom: 0px;
+}
+
+#step #tab-select li a.active:hover {
+	background-color: #fff;
+	color: #ff8400;
+}
+
+
+
+#step #tabs {
+	padding: 0 20px 0;
+	border: 1px solid #ccc;
+	border-radius: 0 6px 6px 6px; 
+	-webkit-border-radius: 0 6px 6px 6px;
+	-moz-border-radius: 0 6px 6px 6px;
+}
+
+#step #tabs > div {
+	padding-top: 40px;
+}
+
+#step #tabs > div .section {
+	clear: both;
+	border-bottom:  1px dashed #ccc;
+	margin-bottom: 32px;
+	padding:0 10px 20px;
+}
+
+#step #tabs > div .section:last-child {
+	margin-bottom: 20px;
+}
+
+#step #tabs > div h2 ,
+#step #tabs > div .section h3 {
+	font-weight: bold;
+	margin-bottom: 12px;
+}
+
+#step #tabs > div h2 {
+	font-size: 22px;
+}
+
+#step #tabs > div .section h3 {
+	font-size: 16px;
+}
+
+#step #tabs > div .section p {
+	line-height: 180%;
+	font-size: 14px;
+	margin: 0 0 4px 0;
+}
+
+
+
+#step #tabs > div .section:last-child {
+	border: 0px;
+}
+
+#step #tabs > div .section .box {
+	overflow: hidden;
+}
+
+#step #tabs > div .section .box .inst-img {
+	float: left;
+	padding-right: 20px;
+}
+
+#step #tabs > div .section .step-img {
+	margin-bottom: 18px;
+}
